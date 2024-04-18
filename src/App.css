@@ -16,11 +16,17 @@ li a {
 
   
 }
+#mainpage{
+  margin-top: 60px;
 
+}
 /* li a:hover {
   color: rgb(151, 209, 226);
 } */
-
+#mainpic{
+  padding-top: 50px;
+  margin: auto;
+}
 
 
 h2{

@@ -6,9 +6,15 @@ const MainPage: React.FC = () => {
   const navigator = useNavigate();
   return (
     <>
-    <img  className="w-80 h-96 mt-16 mb-6 " src={mainpic} alt="MainPic" />
-      
-      <h3 className="m-6">ogs Daily News</h3>
+    <div id="mainpage" >
+    <img
+        id="mainpic"
+        className=" w-80 h-96 mt-16 mb-6 "
+        src={mainpic}
+        alt="MainPic"
+      />
+
+      <h3 className="m-6 text-xl pt-2">ogs Daily News</h3>
       <button
         style={{
           backgroundColor: "gray",
@@ -21,9 +27,10 @@ const MainPage: React.FC = () => {
       >
         เข้าสู่เว็บไซต์
       </button>
+    </div>
+     
     </>
   );
 };
-
 
 export default MainPage;

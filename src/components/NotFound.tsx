@@ -6,7 +6,7 @@ const NotFound = () => {
   const navigator = useNavigate();
   return (
     <>
-      <img className="w-80 h-96 mt-16 mb-6 " src={nopage} alt="NotFound" />
+      <img className="m-auto w-80 h-96 mt-40 mb-6 " src={nopage} alt="NotFound" />
       <button style={{
           backgroundColor: "gray",
           color: "white",

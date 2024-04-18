@@ -53,7 +53,7 @@ const AllNew: React.FC = () => {
               
                 {news.type_new.filter((type)=>id===undefined || type.id === parseInt(id)).map((type) => (
                   <div className="text-sm text-left " key={type.id}>
-                    <h5 className="font-semibold text-sm text-center">
+                    <h5 className="font-semibold text-xl text-center">
                       {type.name}
                     </h5>
                     {type.news_type.map((article) => (
