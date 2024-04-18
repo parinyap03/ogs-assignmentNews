@@ -27,6 +27,7 @@
        "@assets/*": ["assets/*"],
        "@data/*": ["data/*"],
        "@function/*": ["function/*"],
+       "@uicourse/*": ["uicourse/*"],
      }
   },
   "include": ["src"],

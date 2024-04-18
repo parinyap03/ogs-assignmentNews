@@ -12,6 +12,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "src/assets"),
       "@data": path.resolve(__dirname, "src/data"),
      "@function": path.resolve(__dirname, "src/function"),
+     "@uicourse": path.resolve(__dirname, "src/uicourse"),
     },
     extensions: ['.ts', '.tsx']
   },

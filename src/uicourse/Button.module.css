@@ -1,0 +1,88 @@
+.page {
+  display: flex;
+  display: inline-block;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.btn1 {
+  width: 200px;
+  background-color: rgb(156, 64, 64);
+  padding: 35px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: rgb(119, 49, 49) 0px 10px 0px;
+}
+.btn1:hover {
+  background-color: rgb(211, 128, 128);
+  color: rgb(0, 0, 0);
+}
+
+.btn2 {
+  width: 200px;
+  background-color: rgb(43, 103, 70);
+  text-align: center;
+  padding: 35px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: rgb(35, 84, 57) 0px 10px 0px;
+}
+.btn2:hover {
+  background-color: rgb(128, 211, 153);
+  color: rgb(0, 0, 0);
+}
+
+.btn3 {
+  width: 200px;
+  background-color: rgb(33, 121, 156);
+  text-align: center;
+  padding: 35px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: rgb(27, 97, 125) 0px 10px 0px;
+}
+.btn3:hover {
+  background-color: rgb(145, 191, 208);
+  color: rgb(0, 0, 0);
+}
+
+.btn4 {
+  width: 200px;
+  background-image: linear-gradient(
+    180deg,
+    rgb(225, 126, 224) 30%,
+    rgb(88, 219, 255) 100%
+  );
+  text-align: center;
+  padding: 35px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: rgb(63, 160, 187) 0px 10px 0px;
+}
+.btn4:hover {
+  background-image: linear-gradient(
+    180deg,
+    rgb(230, 183, 221) 30%,
+    rgb(161, 196, 226) 100%
+  );
+  color: rgb(0, 0, 0);
+}
+.btn1:active{
+  box-shadow: 2px 2px 5px #fc894d;
+}
+
+.btn2:active{
+  box-shadow: 2px 2px 5px #82fc4d;
+}
+
+.btn3:active{
+  box-shadow: 2px 2px 5px #4d8cfc;
+}
+
+.btn4:active{
+  box-shadow: 2px 2px 5px #dc4dfc;
+}

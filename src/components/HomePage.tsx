@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
       <Navbar />
       <div className="ml-12">
         {sortedNews.map((news, index) => (
-          <div id="content" key={index} className="text-left">
+          <div style={{textAlign:"center"}} id="content" key={index} className="text-left">
             <h2 className="font-semibold mt-3 text-xl ">{news.title}</h2>
             <h4 className="font-semibold mt-8 mb-8 text-sm">
               {news.sub_title}

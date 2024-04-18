@@ -14,7 +14,7 @@ const DetailNew: React.FC = () => {
     <>
       <Navbar />
       <p className="text-md text-end mr-14 ">ผู้เข้าชม: {searchParams.get("viewer")} </p>
-      <h1 className="text-2xl font-bold">รายละเอียด{newsArticle.headline}</h1>
+      <h1 style={{textAlign:"center"}} className="text-2xl font-bold">รายละเอียด{newsArticle.headline}</h1>
       <div id="detail">
         <p className="text-md text-left">รหัสข่าว: {newsArticle.id}</p>
         <p className="text-md text-left">วันที่ลงข่าว: {newsArticle.date}</p>

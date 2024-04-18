@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
         alt="MainPic"
       />
 
-      <h3 className="m-6 text-xl pt-2">ogs Daily News</h3>
+      <h3 style={{textAlign:"center"}} className="m-6 text-xl pt-2">ogs Daily News</h3>
       <button
         style={{
           backgroundColor: "gray",
@@ -22,6 +22,8 @@ const MainPage: React.FC = () => {
           padding: "10px 20px",
           cursor: "pointer",
           borderRadius: "5px",
+         display:"flex",
+          margin:"auto",
         }}
         onClick={() => navigator("/home")}
       >
