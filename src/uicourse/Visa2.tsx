@@ -72,12 +72,20 @@ const Visa2 = () => {
           </div>
 
           <div className={style.incard}>
-            <a style={{ fontSize: 10 }}>EXPIRE</a>
-            <img src={downarrow} alt="" style={{ width: 10,marginLeft:5 }} />
-            <a style={{ marginLeft: 8 }}>02/22</a>
-            <a style={{ marginLeft: 60, fontSize: 10 }}>CVC CODE</a>
-            <img src={downarrow} alt="" style={{ width: 10,marginLeft:5  }} />
-            <a style={{ marginLeft: 8 }}>230</a>
+            <a style={{ marginLeft: 20,fontSize:10 }}>EXPIRE</a>
+            <img
+              style={{ marginLeft: 5,width:10 }}
+              src={downarrow}
+              alt=""
+            />
+            <a style={{ marginLeft: 8, fontSize: 16 }}>02/22</a>
+            <a style={{ marginLeft: 100, fontSize:10  }}>CVC CODE</a>
+            <img
+              style={{ marginLeft: 5,width:10 }}
+              src={downarrow}
+              alt=""
+            />
+            <a style={{ marginLeft: 8, fontSize: 18 }}>230</a>
           </div>
         </div>
         <div className={style.card2}>

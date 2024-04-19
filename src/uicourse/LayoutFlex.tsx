@@ -152,7 +152,7 @@ const LayoutFlex = () => {
               </p>
             </div>
           </div>
-
+         
           <div
             style={{
               display: "flex",
@@ -285,7 +285,8 @@ const LayoutFlex = () => {
               </div>
             </div>
           </div>
-        </div>
+          </div>
+       
         <div className={styles.divbtn}>
           <button className={styles.btnseeall}>See all</button>
         </div>
