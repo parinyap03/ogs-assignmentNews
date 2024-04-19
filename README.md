@@ -1,7 +1,10 @@
-##path
+## path
 
-news workshop go to payh "/"
+news workshop go to path "/"
 
 button workshop go to path "/css"
 
-layout flex woskshop go to path "/layoutflex"
+layout flex workshop go to path "/layoutflex"
+
+visa card workshop go to path "/visa1" and "/visa2"
+

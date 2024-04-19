@@ -1,0 +1,137 @@
+.container {
+  padding: 1rem;
+  max-width: 390px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #e8ebef;
+}
+
+.card {
+  /* width: 350px; */
+  background: linear-gradient(to left, #122449, #3a5284);
+  background-color: #13274f;
+  margin-top: 30px;
+  color: white;
+  border-radius: 10px;
+  height: 210px;
+}
+
+.incard {
+  margin-left: 20px;
+}
+
+.nemu {
+  color: #13274f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.incard,
+.a {
+  display: flex;
+  align-items: center;
+}
+
+.incard a {
+  font-size: 20px;
+}
+
+.belowcard {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.a {
+  font-size: 15px;
+}
+
+.card a {
+  font-size: 12px;
+
+  margin-left: 215px;
+}
+
+.card h4 {
+  margin-top: 10px;
+}
+
+.belowcard {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0px;
+}
+
+.card2 {
+  box-shadow: 0px 0px 5px rgba(193, 188, 188, 0.5);
+  background-color: white;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  padding-left: 5rem;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.flexcon {
+  margin-top: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.list img {
+  margin-left: 10px;
+}
+
+.list .info {
+    /* flex-direction: column; */
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+
+
+.list img.arrow {
+  margin-left: auto;
+}
+
+.list p {
+  margin-top: -10px;
+  color: gray;
+}
+
+.list {
+  box-shadow: 0px 0px 5px rgba(193, 188, 188, 0.5);
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  /* width: 350px; */
+}
+
+.income,
+.expense {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.income {
+  margin-left: -90px;
+}
+
+.verticleLine{
+    border-left: 1px solid rgb(180, 186, 180);
+    height: 50px;
+}

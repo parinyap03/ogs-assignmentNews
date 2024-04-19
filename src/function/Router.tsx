@@ -7,6 +7,8 @@ import AllNew from "@components/AllNew";
 import DetailNew from "@components/DetailNew";
 import Css from "@uicourse/Modulecss";
 import LayoutFlex from "@uicourse/LayoutFlex";
+import Visa1 from "@uicourse/Visa1";
+import Visa2 from "@uicourse/Visa2";
 
 const Routers = createBrowserRouter([
   {
@@ -40,8 +42,15 @@ const Routers = createBrowserRouter([
   {
     path: "/layoutflex",
     element: <LayoutFlex />,
+  },
+  {
+    path:"/visa1",
+    element: <Visa1/>
+  },
+  {
+    path:"/visa2",
+    element: <Visa2/>
   }
-
 ]);
 
 export default Routers;
