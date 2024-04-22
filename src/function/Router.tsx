@@ -9,6 +9,8 @@ import Css from "@uicourse/Modulecss";
 import LayoutFlex from "@uicourse/LayoutFlex";
 import Visa1 from "@uicourse/Visa1";
 import Visa2 from "@uicourse/Visa2";
+import Card from "@tailwindcourse/Card";
+import Card2 from "@tailwindcourse/Card2";
 
 const Routers = createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const Routers = createBrowserRouter([
   {
     path:"/visa2",
     element: <Visa2/>
+  },
+  {
+    path: "/tailwind",
+    element: <Card/>
+  },
+  {
+    path: "/tailwind2",
+    element: <Card2/>
   }
 ]);
 

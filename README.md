@@ -8,3 +8,4 @@ layout flex workshop go to path "/layoutflex"
 
 visa card workshop go to path "/visa1" and "/visa2"
 
+tailwind workshop go to path "/tailwind" and "/tailwind2"

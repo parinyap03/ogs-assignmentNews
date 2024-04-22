@@ -28,6 +28,7 @@
        "@data/*": ["data/*"],
        "@function/*": ["function/*"],
        "@uicourse/*": ["uicourse/*"],
+       "@tailwindcourse/*": ["tailwindcourse/*"],
      }
   },
   "include": ["src"],

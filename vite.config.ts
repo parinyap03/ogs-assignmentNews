@@ -13,6 +13,7 @@ export default defineConfig({
       "@data": path.resolve(__dirname, "src/data"),
      "@function": path.resolve(__dirname, "src/function"),
      "@uicourse": path.resolve(__dirname, "src/uicourse"),
+     "@tailwindcourse": path.resolve(__dirname, "src/tailwindcourse"),
     },
     extensions: ['.ts', '.tsx']
   },
