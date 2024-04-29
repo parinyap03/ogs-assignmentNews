@@ -20,15 +20,17 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-     /* Paths */
+    /* Paths */
      "baseUrl": "./src",
      "paths": {
-       "@components/*": ["components/*" ],
+       "@components/* ": ["components/*" ],
        "@assets/*": ["assets/*"],
        "@data/*": ["data/*"],
        "@function/*": ["function/*"],
        "@uicourse/*": ["uicourse/*"],
        "@tailwindcourse/*": ["tailwindcourse/*"],
+       "@cssframewcourse/*": ["cssframewcourse/*"],
+       "@apicourse/*": ["apicourse/*"],
      }
   },
   "include": ["src"],

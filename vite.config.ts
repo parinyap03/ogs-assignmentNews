@@ -14,18 +14,23 @@ export default defineConfig({
      "@function": path.resolve(__dirname, "src/function"),
      "@uicourse": path.resolve(__dirname, "src/uicourse"),
      "@tailwindcourse": path.resolve(__dirname, "src/tailwindcourse"),
+     "@cssframewcourse": path.resolve(__dirname, "src/cssframewcourse"),
+     "@store": path.resolve(__dirname, "src/store"),
+     "@apicourse": path.resolve(__dirname, "src/apicourse"),
+   
+     
     },
-    extensions: ['.ts', '.tsx']
+    extensions: ['.ts', '.tsx',".js"]
   },
   server: {
     open: true,
     port: 3000,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://localhost:5000',
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/api/, '')
+    //   }
+    // }
   }
 })

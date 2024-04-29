@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
+.ant-modal-wrap {
+  background-color: rgba(0, 0, 0, 0.8);
+}

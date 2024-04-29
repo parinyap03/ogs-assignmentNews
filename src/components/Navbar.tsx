@@ -1,6 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
 import Logo from "@assets/react.svg";
-import { useState } from "react";
 
 const Navbar = () => {
   
