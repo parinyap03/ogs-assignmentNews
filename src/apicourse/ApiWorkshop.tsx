@@ -83,6 +83,10 @@ const ApiWorkshop = () => {
   const [dataModal, setDataModal] = useState<House>();
   const [isFlipped, setIsFlipped] = useState(false);
 
+  // const { data , isFetching , isSuccess , isLoading , isError } = useGetPokemonByNameQuery('bulbasaur')
+  // const [ result , getResult ] = useGetPokemonByNameMutatuin('bulbasaur')
+  // getResult('bulbasaur')
+
   // const handleClick = () => {
   //   setIsFlipped(!isFlipped);
   // };
@@ -126,12 +130,12 @@ const ApiWorkshop = () => {
                 return (
                   <div className="p-10 " key={index}>
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.5 }}
-                      animate={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.8,
-                        delay: 0.5,
-                        ease: [0, 0.71, 0.2, 1.01],
+                        duration: 0.5,
+                        delay: 0.5 + index * 0.07,
+                        // ease: [0, 0.71, 0.2, 1.01],
                       }}
                     >
                       <div
