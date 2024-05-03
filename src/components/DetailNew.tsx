@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "@components/Navbar";
+import Navbar from "../components/Navbar";
 import { useParams, useSearchParams } from "react-router-dom";
 import { data_new } from "@data/data_new";
 
@@ -9,7 +9,7 @@ const DetailNew: React.FC = () => {
   let newsArticle = data_new[0].type_new
     .filter((type) => type.id === parseInt(id as string))[0]
     .news_type.filter((article) => article.id === parseInt(newId as string))[0];
-  console.log(newsArticle);
+  // console.log(newsArticle);
   return (
     <>
       <Navbar />

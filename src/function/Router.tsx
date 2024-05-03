@@ -4,7 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 // import HP from "@components/HomePage";
 import HomePage from "../components/HomePage";
 import MainPage from "../components/MainPage";
-import NotFound from "../components/NotFound";
+// import NotFound from "../components/NotFound";
 import AllNew from "../components/AllNew";
 import DetailNew from "../components/DetailNew";
 import Css from "@uicourse/Modulecss";
@@ -13,10 +13,15 @@ import Visa1 from "@uicourse/Visa1";
 import Visa2 from "@uicourse/Visa2";
 import Card from "@tailwindcourse/Card";
 import Card2 from "@tailwindcourse/Card2";
-import Form from "@cssframewcourse/Form";
 import Regis from "../components/Regis";
 import TestFetchData from "@apicourse/TestFetchData";
 import ApiWorkshop from "@apicourse/ApiWorkshop";
+import Pokemon from "@assignmentpokemon/Page";
+import Filter from "@assignmentpokemon/Filter";
+import Example from "@workshoppokemon/Example";
+import Home from "@workshoppokemon/Home";
+import PokemonDetail from "../workshoppokemon/PokemonDetail";
+import NotFound from "../workshoppokemon/NotFound";
 
 const Routers = createBrowserRouter([
   {
@@ -52,36 +57,53 @@ const Routers = createBrowserRouter([
     element: <LayoutFlex />,
   },
   {
-    path:"/visa1",
-    element: <Visa1/>
+    path: "/visa1",
+    element: <Visa1 />,
   },
   {
-    path:"/visa2",
-    element: <Visa2/>
+    path: "/visa2",
+    element: <Visa2 />,
   },
   {
     path: "/tailwind",
-    element: <Card/>
+    element: <Card />,
   },
   {
     path: "/tailwind2",
-    element: <Card2/>
+    element: <Card2 />,
   },
-  {
-    path: "/form",
-    element: <Form/>
-  },
+
   {
     path: "/regis",
-    element: <Regis/>
+    element: <Regis />,
   },
   {
     path: "/testfetch",
-    element: <TestFetchData/>
+    element: <TestFetchData />,
   },
   {
     path: "/harry",
-    element: <ApiWorkshop/>
+    element: <ApiWorkshop />,
+  },
+  {
+    path: "/pokemon",
+    element: <Pokemon />,
+  },
+  {
+    path: "/filter",
+    element: <Filter />,
+  },
+  {
+    path: "/example",
+    element: <Example />,
+  },
+  {
+    path: "/homepk",
+    element: <Home />,
+  },
+  {
+    path: "/pokemon/detail/:name_pokemon",
+    element: <PokemonDetail  />,
   }
 ]);
 

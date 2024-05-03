@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="px-[80px] bg-cyan-700 " >
-        <ul className="flex items-center space-x-4">
+        <ul id="ulnav" className="flex items-center space-x-4">
           <li >
             <Link to="/"><img  className="w-10 " src={Logo} alt="Logo" /></Link>
           </li>

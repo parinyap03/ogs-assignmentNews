@@ -21,17 +21,21 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Paths */
-     "baseUrl": "./src",
-     "paths": {
-       "@components/* ": ["components/*" ],
-       "@assets/*": ["assets/*"],
-       "@data/*": ["data/*"],
-       "@function/*": ["function/*"],
-       "@uicourse/*": ["uicourse/*"],
-       "@tailwindcourse/*": ["tailwindcourse/*"],
-       "@cssframewcourse/*": ["cssframewcourse/*"],
-       "@apicourse/*": ["apicourse/*"],
-     }
+    "baseUrl": "./src",
+    "paths": {
+      "@components/* ": ["components/*"],
+      "@assets/*": ["assets/*"],
+      "@data/*": ["data/*"],
+      "@function/*": ["function/*"],
+      "@uicourse/*": ["uicourse/*"],
+      "@tailwindcourse/*": ["tailwindcourse/*"],
+      "@cssframewcourse/*": ["cssframewcourse/*"],
+      "@apicourse/*": ["apicourse/*"],
+      "@assignmentpokemon/*": ["assignmentpokemon/*"],
+      "@store/*": ["store/*"],
+      "@services/*": ["services/*"],
+      "@workshoppokemon/*": ["workshoppokemon/*"],
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -15,8 +15,6 @@ const Regis: React.FC = () => {
     dispatch(updateFormRegis(values));
   };
 
-
-
   return (
     <>
       <div className="flex items-center justify-start h-screen bg-black ">
@@ -104,13 +102,14 @@ const Regis: React.FC = () => {
 
         <div className=" bg-white  p-5 flex-1 h-[600px] font-bold">
           <h1 className="mt-10 text-xl">ข้อมูลจาก Reducer</h1>
-     
+
           <h1>
-            usrname : {" "}
-            {count.username.length ? count.username : "ไม่มีข้อมูล"}
-            </h1>
+            usrname : {count.username.length ? count.username : "ไม่มีข้อมูล"}
+          </h1>
           <h1>email: {count.email.length ? count.email : "ไม่มีข้อมูล"}</h1>
-          <h1>password: {count.password.length ? count.password : "ไม่มีข้อมูล"}</h1>
+          <h1>
+            password: {count.password.length ? count.password : "ไม่มีข้อมูล"}
+          </h1>
         </div>
       </div>
     </>

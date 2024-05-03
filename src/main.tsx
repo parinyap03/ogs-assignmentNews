@@ -1,32 +1,54 @@
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import App from "./App.tsx";
+// import "./index.css";
+// import store from "./store/store.tsx";
+// import { Provider } from "react-redux";
+// import { ConfigProvider, Modal } from "antd";
+
+// ReactDOM.createRoot(document.getElementById("root")!).render(
+//   <React.StrictMode>
+//     {/* <Provider store={store}> */}
+//     {/* <BrowserRouter> */}
+//     <ConfigProvider
+//       theme={{
+//         components: {
+//           Modal: {
+//             contentBg: "background-color: #000 !important",
+//             colorText: "white",
+//             headerBg: "background-color: #f0f0f0",
+//             titleColor: "white",
+//             titleFontSize: 20,
+//           },
+//         },
+//       }}
+//     >
+//       <App />
+//     </ConfigProvider>
+
+//     {/* </BrowserRouter> */}
+//     {/* </Provider> */}
+//   </React.StrictMode>
+// );
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import store from "./store/store";
+import App from "./App";
 import { Provider } from "react-redux";
-import { ConfigProvider, Modal } from "antd";
+import "./index.css";
+import { store } from "@store/store";
+import { Pagination } from "antd";
 
+// const rootElement = document.getElementById("root");
+// const root = ReactDOM.createRoot(rootElement as HTMLElement);
+
+// root.render(
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    {/* <BrowserRouter> */}
-    <ConfigProvider
-      theme={{
-        components: {
-          Modal: {
-            contentBg: "background-color: #000 !important",
-            colorText: "white",
-            headerBg: "background-color: #f0f0f0",
-            titleColor: "white",
-            titleFontSize: 20,
-          },
-        },
-      }}
-    >
+    <Provider store={store}>
       <App />
-    </ConfigProvider>
-
-    {/* </BrowserRouter> */}
-    {/* </Provider> */}
+      {/* <Pagination defaultCurrent={1} total={50} /> */}
+    </Provider>
   </React.StrictMode>
 );
+
+// );
