@@ -1,0 +1,35 @@
+.list:nth-child(3),
+.list:nth-child(6) {
+  margin-left: 30px;
+}
+
+.list:nth-child(1),
+.list:nth-child(4) {
+  margin-left: 10px;
+}
+
+.list:nth-child(2),
+.list:nth-child(5) {
+  margin-left: 15px;
+  width: 150px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

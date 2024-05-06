@@ -5,9 +5,13 @@ import pkLogo from "../assets/pokemonLogo.png";
 import PokemonCard from "./PokemonCard";
 import { Pagination } from "antd";
 import pkloading from "../assets/pkloading.svg";
+import { useSearchParams } from "react-router-dom";
 
 const Home = () => {
-  const [current, setCurrent] = useState(1);
+  const [searchParams, setSearchParam] = useSearchParams();
+  const page = searchParams.get("page");
+  const [current, setCurrent] = useState(parseInt(page ?? "1"));
+
   const { data, isLoading, isFetching } = useGetListPokemonQuery({
     limit: "10",
     offset: ((current - 1) * 10).toString(),
@@ -29,6 +33,7 @@ const Home = () => {
   const onChange = (page: number) => {
     // console.log(page);
     setCurrent(page);
+    setSearchParam({ page: page.toString() })
   };
   return (
     

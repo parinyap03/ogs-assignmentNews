@@ -17,16 +17,18 @@ import Regis from "../components/Regis";
 import TestFetchData from "@apicourse/TestFetchData";
 import ApiWorkshop from "@apicourse/ApiWorkshop";
 import Pokemon from "@assignmentpokemon/Page";
-import Filter from "@assignmentpokemon/Filter";
-import Example from "@workshoppokemon/Example";
+// import Filter from "@assignmentpokemon/Filter";
+// import Example from "@workshoppokemon/Example";
 import Home from "@workshoppokemon/Home";
 import PokemonDetail from "../workshoppokemon/PokemonDetail";
-import NotFound from "../workshoppokemon/NotFound";
+// import NotFound from "../workshoppokemon/NotFound";
+import Detail from "@assignmentpokemon/Detail";
+import NoPage from "@assignmentpokemon/NoPage";
 
 const Routers = createBrowserRouter([
   {
     path: "*",
-    element: <NotFound />,
+    element: <NoPage />,
   },
   {
     path: "/",
@@ -89,22 +91,30 @@ const Routers = createBrowserRouter([
     path: "/pokemon",
     element: <Pokemon />,
   },
+    // {
+    //   path: "/filter",
+    //   element: <Filter />,
+    // },
+  // {
+  //   path: "/example",
+  //   element: <Example />,
+  // },
   {
-    path: "/filter",
-    element: <Filter />,
+    path: "/pokemon/pokemon-list",
+    element: <Home />,
   },
   {
-    path: "/example",
-    element: <Example />,
+    path: "/pokemon/detail/:name_pokemon",
+    element: <PokemonDetail  />,
   },
   {
     path: "/homepk",
     element: <Home />,
   },
   {
-    path: "/pokemon/detail/:name_pokemon",
-    element: <PokemonDetail  />,
-  }
+    path: "/detail/:pokemon",
+    element: <Detail />,
+  },
 ]);
 
 export default Routers;

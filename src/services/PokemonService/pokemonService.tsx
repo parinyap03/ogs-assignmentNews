@@ -82,4 +82,5 @@ export const {
   useGetListPokemon2Mutation,
   useGetPokemonByIdQuery,
 } = pokemonService;
+
 export default pokemonService;

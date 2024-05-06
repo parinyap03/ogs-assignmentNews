@@ -1,6 +1,7 @@
 import { useGetPokemonByIdQuery } from "@services/PokemonService/pokemonService";
 import backicon from "../assets/backicon.svg";
 import { useNavigate, useParams } from "react-router-dom";
+import "./WorkshopPkStyle.css";
 
 const PokemonDetail = () => {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ const PokemonDetail = () => {
                   width={30}
                 />
               </div>
-              <div className="text-2xl text-white font-bold mt-5 ">
+              <div id="pkname" className="text-2xl text-white font-bold mt-5 capitalize ">
                 {data?.Name}
               </div>
               <div className="flex ">
@@ -55,19 +56,22 @@ const PokemonDetail = () => {
               <div className="bg-gray-200 rounded-lg p-2  ">
                 <div className="grid gap-2 grid-cols-3 ml-1 ">
                   {data?.stats.map((item) => (
-                    <div className="text-[10px] ">
+                    <div className="list text-[10px] ">
                       {item.base_stat} : {item.name}
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="ml-4">Abilities</div>
-              <div className="bg-gray-200 rounded-lg p-2 h-[100px] ">
+              <div className="ml-4 mt-2 mb-2">Abilities</div>
+              <div className="relative bg-gray-200 rounded-lg p-2 h-[85px] scroll-smooth ">
                 {data?.abilities.map((item, index) => (
-                  <div className="text-[12px] ">
+                  
+                  <div className="text-[12px] flex flex-col">
                     {index + 1}.{item}
                   </div>
+                  
                 ))}
+                <div className="absolute right-1 top-2  h-[70px] w-[3px] bg-[#777777] rounded-full"></div>
               </div>
             </div>
           </div>

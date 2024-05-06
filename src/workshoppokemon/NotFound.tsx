@@ -17,7 +17,7 @@ const NotFound = () => {
             borderRadius: "5px",
             width: "fit-content",
           }}
-          onClick={() => navigator("/homepk")}
+          onClick={() => navigator("/pokemon/pokemon-list")}
         >
           back to home
         </button>
