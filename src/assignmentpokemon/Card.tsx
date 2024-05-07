@@ -39,7 +39,7 @@ const Card: React.FC<cardType> = ({
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.3,
-            delay: 0.3,
+            delay: 0.1,
             ease: [0, 0.71, 0.2, 1.01],
           }}
           className="rounded-lg bg-slate-500 w-[250px] h-[330px] mt-10 relative "

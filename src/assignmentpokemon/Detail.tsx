@@ -47,7 +47,7 @@ const Detail = () => {
           <div className="flex justify-center ">
             <HomeOutlined
               onClick={() => navigate("/pokemon")}
-              style={{ fontSize: "30px" }}
+              style={{ fontSize: "30px" ,color:"gray",border:"2px solid gray",borderRadius:"50%",padding:"5px",backgroundColor:"white" }}
               className="mt-5"
             />
           </div>
@@ -73,7 +73,7 @@ const Detail = () => {
               <div>
                 <LeftCircleOutlined
                   className="w-[100px]  flex justify-end items-center"
-                  style={{ fontSize: "40px" }}
+                  style={{ fontSize: "40px",color:"gray" }}
                   onClick={() => {
                     navigate(
                       `/detail/${String(
@@ -155,7 +155,7 @@ const Detail = () => {
                     </div>
                   </div>
                 </div>
-                <div className="p-10">
+                <div className="p-10 mx-10">
                   <motion.img
                     key={detail?.no}
                     src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${detail?.no}.png`}
@@ -173,6 +173,7 @@ const Detail = () => {
                         restDelta: 0.001,
                       },
                     }}
+
                   />
                 </div>
                 <div style={{ perspective: 500 }}>
@@ -254,7 +255,7 @@ const Detail = () => {
               <div>
                 <RightCircleOutlined
                   className="w-[100px]  flex justify-start items-center"
-                  style={{ fontSize: "40px" }}
+                  style={{ fontSize: "40px",color:"gray" }}
                   onClick={() => {
                     navigate(
                       `/detail/${String(

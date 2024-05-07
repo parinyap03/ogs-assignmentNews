@@ -41,7 +41,14 @@ const Page = () => {
   return (
     <>
       <div className=" flex flex-col items-center justify-center mt-10 ">
-        <img src={pkLogo} alt="pokemonlogo" width={200} className="mb-5" />
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          src={pkLogo}
+          alt="pokemonlogo"
+          width={200}
+          className="mb-5"
+        />
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -68,14 +75,11 @@ const Page = () => {
                   // type === item ? "black" : color,
                   border:
                     typeUrl === item ? `3px solid black` : "3px solid white",
-                  scale: typeUrl === item ? 1.1 : 1,
+                  // scale: typeUrl === item ? 1.1 : 1,
                   boxSizing: "border-box",
                 }}
               >
-                <div
-                
-                  className="flex justify-center items-center"
-                >
+                <div className="flex justify-center items-center">
                   <img
                     src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/Others/type-icons/png/${item}.png`}
                     alt="typepokemon"

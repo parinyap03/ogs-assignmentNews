@@ -21,15 +21,15 @@ import Pokemon from "@assignmentpokemon/Page";
 // import Example from "@workshoppokemon/Example";
 import Home from "@workshoppokemon/Home";
 import PokemonDetail from "../workshoppokemon/PokemonDetail";
-// import NotFound from "../workshoppokemon/NotFound";
+import NotFound from "../workshoppokemon/NotFound";
 import Detail from "@assignmentpokemon/Detail";
 import NoPage from "@assignmentpokemon/NoPage";
 
 const Routers = createBrowserRouter([
   {
     path: "*",
-    // element: <div>error</div>,
     element: <NoPage />,
+    // element: <NotFound />,
   },
   {
     path: "/",
