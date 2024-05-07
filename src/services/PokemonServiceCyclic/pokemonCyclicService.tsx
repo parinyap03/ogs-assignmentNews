@@ -1,11 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { PokemonCyclicRequest,GetPokemon } from "./pokemonCyclicRequest/pokemonCyclicRequest";
+import {
+  PokemonCyclicRequest,
+  GetPokemon,
+} from "./pokemonCyclicRequest/pokemonCyclicRequest";
 import {
   RawPokemon,
   PokemonCyclicResponse,
 } from "./pokemonCyclicResponse/pokemonCyclicResponse";
-
-
 
 const pokemonCyclicService = createApi({
   reducerPath: "pokemonCyclicService",
@@ -14,7 +15,7 @@ const pokemonCyclicService = createApi({
   }),
   endpoints: (builder) => ({
     getListPokemon: builder.query<PokemonCyclicResponse, GetPokemon>({
-      query: ({type}) => {
+      query: ({ type }) => {
         const params = new URLSearchParams({
           type,
         });
@@ -25,19 +26,17 @@ const pokemonCyclicService = createApi({
       },
       transformResponse: (response: RawPokemon, meta, arg) =>
         response.data.data,
-      
     }),
-    getDetailPokemon: builder.query<PokemonCyclicResponse, {no:string}>({
-      query: ({no}) => {
+    getDetailPokemon: builder.query<PokemonCyclicResponse, { no: string }>({
+      query: ({ no }) => {
         return `pokemon/${no}`;
       },
       transformResponse: (response: RawPokemon, meta, arg) =>
         response.data.data,
-      
     }),
-
   }),
 });
 
-export const { useGetListPokemonQuery,useGetDetailPokemonQuery } = pokemonCyclicService;
+export const { useGetListPokemonQuery, useGetDetailPokemonQuery } =
+  pokemonCyclicService;
 export default pokemonCyclicService;

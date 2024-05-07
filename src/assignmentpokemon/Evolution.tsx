@@ -12,13 +12,14 @@ const Evolution = ({
   const detail = data && data[0];
   return (
     <>
+   
       {method && (
         <div className="flex flex-col justify-center items-center p-10 ">
           <div >{method}</div>
           <ArrowRightOutlined  className="mt-5" />
         </div>
       )}
-      <div className="bg-[#EDEEF1] flex flex-col justify-center items-center p-5 shadow-lg shadow-slate-300 ">
+      <div className="bg-[#EDEEF1] flex flex-col justify-between items-center p-5 shadow-lg shadow-slate-300 w-[300px] mb-10">
         <div>
           <img
             src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${no}.png`}
@@ -38,7 +39,7 @@ const Evolution = ({
             <div className="ml-2 mr-2 text-white">{detail?.name}</div>
           </div>
         ))}
-        <div className="flex  m-3">
+        <div className="flex m-3">
           {detail?.type.map((type) => (
             <div
               className="bg-orange-300 rounded-full w-fit p-[5px] m-1 "
@@ -56,6 +57,7 @@ const Evolution = ({
           ))}
         </div>
       </div>
+      
     </>
   );
 };

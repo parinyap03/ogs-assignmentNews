@@ -5,13 +5,19 @@ import {
   TypePokemon,
 } from "../services/PokemonServiceCyclic/pokemonCyclicResponse/pokemonCyclicResponse";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import pkLogo from "../assets/pokemonLogo.png";
+import { Link, useSearchParams } from "react-router-dom";
+import "@assignmentpokemon/PokemonStyle.css";
+import { motion } from "framer-motion";
+
 const Page = () => {
   const [type, setType] = useState<TypePokemon | "">("");
-  const { data, isLoading, isSuccess } = useGetListPokemonQuery({
-    type: type,
+  const [searchParams] = useSearchParams();
+  const typeUrl = searchParams.get("type");
+  const { data, isLoading } = useGetListPokemonQuery({
+    type: typeUrl as TypePokemon | "",
   });
+
   // console.log(data);
   // const [data, setData] = useState<Pokemon[]>();
   // const AxiosFetchData = () => {
@@ -31,39 +37,75 @@ const Page = () => {
   // useEffect(() => {
   //   AxiosFetchData();
   // }, []);
-  console.log(isLoading);
+  // console.log(isLoading);
   return (
     <>
-      <div className="flex flex-col items-center justify-center mt-10 ">
+      <div className=" flex flex-col items-center justify-center mt-10 ">
         <img src={pkLogo} alt="pokemonlogo" width={200} className="mb-5" />
-        <div className="grid gap-5 grid-cols-5 w-full max-w-[1330px] h-fit  rounded-lg bg-opacity-50 ">
-          {Object.keys(ColorPokemon).map((item) => (
-            <motion.div
-              key={item}
-              whileHover={{ scale: 1.1 }}
-              className={`hover:bg-slate-400 bg-slate-500 rounded-lg p-3  text-white font-bold  cursor-pointer text-center`}
-              onClick={() => {
-                if (item === type) {
-                  setType("");
-                } else {
-                  setType(item as TypePokemon);
-                }
-              }}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="grid gap-5 grid-cols-5 w-full max-w-[1330px] h-fit  rounded-lg bg-opacity-50 "
+        >
+          {Object.keys(ColorPokemon).map((item) => {
+            const color = ColorPokemon[item as TypePokemon];
+            return (
+              <Link
+                to={item === typeUrl ? "/pokemon" : `/pokemon?type=${item}`}
+                key={item}
+                className={`filter rounded-lg p-3 text-white font-bold  cursor-pointer text-center`}
+                onClick={() => {
+                  if (item === typeUrl) {
+                    setType("");
+                  } else {
+                    setType(item as TypePokemon);
+                  }
+                }}
+                style={{
+                  backgroundColor:
+                    // "white",
+                    color,
+                  // type === item ? "black" : color,
+                  border:
+                    typeUrl === item ? `3px solid black` : "3px solid white",
+                  scale: typeUrl === item ? 1.1 : 1,
+                  boxSizing: "border-box",
+                }}
+              >
+                <div
+                
+                  className="flex justify-center items-center"
+                >
+                  <img
+                    src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/Others/type-icons/png/${item}.png`}
+                    alt="typepokemon"
+                    // style={{
+                    //   backgroundColor: color,
+                    // }}
+                    // className="rounded-full p-1 aspect-square w-8  p-[6px]"
+                    width={30}
+                  />
+
+                  <div className="text-center ml-2 ">{item.toUpperCase()}</div>
+                </div>
+              </Link>
+            );
+          })}
+        </motion.div>
+        {/* {type ? (
+          <div className="font-bold mt-10 flex justify-center items-center ">
+            <img
+              src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/Others/type-icons/png/${type}.png`}
               style={{
-                backgroundColor: ColorPokemon[item as TypePokemon],
+                backgroundColor: ColorPokemon[type],
               }}
-            >
-              <div className="flex justify-center items-center">
-                <img
-                  src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/Others/type-icons/png/${item}.png`}
-                  alt="typepokemon"
-                  width={20}
-                />
-                <div className="text-center ml-2">{item.toUpperCase()}</div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              className="rounded-full p-2"
+              alt="pikachu"
+              width={50}
+            />
+          </div>
+        ) : null} */}
+
         <div className="grid gap-5 grid-cols-5 justify-items-center">
           {isLoading ? (
             <>

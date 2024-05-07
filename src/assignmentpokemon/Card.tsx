@@ -33,11 +33,18 @@ const Card: React.FC<cardType> = ({
   return (
     <>
       {!isLoading ? (
-        <motion.div whileHover={{ scale: 1.1 }} className="rounded-lg bg-slate-500 w-[250px] h-[330px] mt-10 relative ">
-          <Link
-            to={`/detail/${id}`}
-            
-          >
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="rounded-lg bg-slate-500 w-[250px] h-[330px] mt-10 relative "
+        >
+          <Link to={`/detail/${id}`}>
             <div className="flex flex-col p-3 rounded-lg">
               {type.slice(0, 1).map((item) => (
                 <div

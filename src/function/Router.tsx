@@ -28,6 +28,7 @@ import NoPage from "@assignmentpokemon/NoPage";
 const Routers = createBrowserRouter([
   {
     path: "*",
+    // element: <div>error</div>,
     element: <NoPage />,
   },
   {
@@ -91,10 +92,10 @@ const Routers = createBrowserRouter([
     path: "/pokemon",
     element: <Pokemon />,
   },
-    // {
-    //   path: "/filter",
-    //   element: <Filter />,
-    // },
+  // {
+  //   path: "/filter",
+  //   element: <Filter />,
+  // },
   // {
   //   path: "/example",
   //   element: <Example />,
@@ -105,7 +106,7 @@ const Routers = createBrowserRouter([
   },
   {
     path: "/pokemon/detail/:name_pokemon",
-    element: <PokemonDetail  />,
+    element: <PokemonDetail />,
   },
   {
     path: "/homepk",

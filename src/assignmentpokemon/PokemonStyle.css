@@ -1,0 +1,21 @@
+.skew{
+    transform: rotateY(30deg) scale(1);
+    transition: 0.03s;
+    transform-style: preserve-3d;
+}
+
+.skew:hover,.skew2:hover{
+    transform: none;
+}
+
+.skew2{
+    transform: rotateY(-30deg) scale(1);
+    transition: 0.03s;
+    transform-style: preserve-3d;
+}
+
+.filter:hover{
+    transform: scale(1.1);
+    /* box-sizing: border-box; */
+}
+
