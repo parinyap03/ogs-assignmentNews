@@ -21,9 +21,6 @@ const pokemonService = createApi({
           method: "GET",
         };
       },
-      //   transformResponse:(response:PokemonResponse,meta,agr)=>{
-      //       return response;
-      //   }
     }),
     getListPokemon2: builder.mutation<PokemonResponse, PokemonRequest>({
       query: (data) => {

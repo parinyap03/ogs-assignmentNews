@@ -14,7 +14,7 @@ const Page = () => {
   const [type, setType] = useState<TypePokemon | "">("");
   const [searchParams] = useSearchParams();
   const typeUrl = searchParams.get("type");
-  const { data, isLoading } = useGetListPokemonQuery({
+  const { data, isLoading,isFetching } = useGetListPokemonQuery({
     type: typeUrl as TypePokemon | "",
   });
 
@@ -38,9 +38,10 @@ const Page = () => {
   //   AxiosFetchData();
   // }, []);
   // console.log(isLoading);
+
   return (
     <>
-      <div className=" flex flex-col items-center justify-center mt-10 ">
+      <div className=" flex flex-col items-center justify-center mt-5 ">
         <motion.img
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -70,13 +71,12 @@ const Page = () => {
                 }}
                 style={{
                   backgroundColor:
-                    // "white",
                     color,
                   // type === item ? "black" : color,
                   border:
                     typeUrl === item ? `3px solid black` : "3px solid white",
                   // scale: typeUrl === item ? 1.1 : 1,
-                  boxSizing: "border-box",
+                  // boxSizing: "border-box",
                 }}
               >
                 <div className="flex justify-center items-center">
@@ -111,7 +111,7 @@ const Page = () => {
         ) : null} */}
 
         <div className="grid gap-5 grid-cols-5 justify-items-center">
-          {isLoading ? (
+          {isFetching ? (
             <>
               {Array.from({ length: 10 })?.map((item, index) => (
                 <Card

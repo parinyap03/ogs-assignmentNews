@@ -18,7 +18,7 @@ const Regis: React.FC = () => {
   return (
     <>
       <div className="flex items-center justify-start h-screen bg-black ">
-        <div className=" h-[500px] bg- p-20 flex-1 h-screen">
+        <div className="  bg- p-20 flex-1 h-screen ">
           <div className="flex p-5  justify-center">
             <a
               href="http://vitejs.dev/"

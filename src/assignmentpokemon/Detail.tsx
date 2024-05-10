@@ -15,7 +15,6 @@ import { useNavigate } from "react-router-dom";
 import NoPage from "../assignmentpokemon/NoPage";
 import "./PokemonStyle.css";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const Detail = () => {
   const { pokemon } = useParams();
@@ -44,13 +43,22 @@ const Detail = () => {
     <>
       {detail ? (
         <div className="bg-[#E5E7EB] h-screen overflow-auto">
-          <div className="flex justify-center ">
+          <motion.div className="flex justify-center "
+          whileHover={{ scale: 1.1 }}
+          >
             <HomeOutlined
               onClick={() => navigate("/pokemon")}
-              style={{ fontSize: "30px" ,color:"gray",border:"2px solid gray",borderRadius:"50%",padding:"5px",backgroundColor:"white" }}
+              style={{
+                fontSize: "30px",
+                color: "gray",
+                border: "2px solid gray",
+                borderRadius: "50%",
+                padding: "5px",
+                backgroundColor: "white",
+              }}
               className="mt-5"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-2xl font-bold mt-2 ">
               {detail?.name.toUpperCase()}
@@ -63,7 +71,7 @@ const Detail = () => {
                   boxShadow: `0 0 10px 0 ${ColorPokemon[type]}`,
                 }}
               >
-                <div className=" mr-2 ml-2 capitalize ">
+                <div className=" mr-2 ml-2 capitalize text-xl">
                   {detail?.species} pokemon
                 </div>
               </div>
@@ -73,14 +81,13 @@ const Detail = () => {
               <div>
                 <LeftCircleOutlined
                   className="w-[100px]  flex justify-end items-center"
-                  style={{ fontSize: "40px",color:"gray" }}
+                  style={{ fontSize: "40px", color: "gray" }}
                   onClick={() => {
                     navigate(
                       `/detail/${String(
                         "00" + (parseInt(detail?.no || "") - 1)
                       ).slice(-3)}`
                     );
-                    
                   }}
                 />
               </div>
@@ -173,7 +180,6 @@ const Detail = () => {
                         restDelta: 0.001,
                       },
                     }}
-
                   />
                 </div>
                 <div style={{ perspective: 500 }}>
@@ -255,7 +261,7 @@ const Detail = () => {
               <div>
                 <RightCircleOutlined
                   className="w-[100px]  flex justify-start items-center"
-                  style={{ fontSize: "40px",color:"gray" }}
+                  style={{ fontSize: "40px", color: "gray" }}
                   onClick={() => {
                     navigate(
                       `/detail/${String(
@@ -266,25 +272,30 @@ const Detail = () => {
                 />
               </div>
             </div>
-
-            {detail?.type.slice(0, 1).map((type) => (
-              <div className="m-10">
-                <div
-                  className=" w-fit rounded-lg p-1 "
-                  style={{
-                    backgroundColor: ColorPokemon[type],
-                    boxShadow: `0 0 10px 0 ${ColorPokemon[type]}`,
-                  }}
-                >
-                  <div className="mr-2 ml-2 text-white ">EVOLUTION CHAIN</div>
+            {detail.evolution.length > 0 && (
+              <div className="flex flex-col justify-center items-center">
+                {detail?.type.slice(0, 1).map((type) => (
+                  <div className="m-10">
+                    <div
+                      className=" w-fit rounded-lg p-1 "
+                      style={{
+                        backgroundColor: ColorPokemon[type],
+                        boxShadow: `0 0 10px 0 ${ColorPokemon[type]}`,
+                      }}
+                    >
+                      <div className="mr-2 ml-2 text-white text-xl ">
+                        EVOLUTION CHAIN
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                <div className=" w-fit p-2 flex  ">
+                  {detail?.evolution.map((item) => (
+                    <Evolution no={item.no} method={item.method} />
+                  ))}
                 </div>
               </div>
-            ))}
-            <div className=" w-fit p-2 flex  ">
-              {detail?.evolution.map((item) => (
-                <Evolution no={item.no} method={item.method} />
-              ))}
-            </div>
+            )}
           </div>
         </div>
       ) : (

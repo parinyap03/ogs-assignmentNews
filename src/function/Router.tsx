@@ -24,6 +24,12 @@ import PokemonDetail from "../workshoppokemon/PokemonDetail";
 import NotFound from "../workshoppokemon/NotFound";
 import Detail from "@assignmentpokemon/Detail";
 import NoPage from "@assignmentpokemon/NoPage";
+import HomeQuiz from "@assignmentquiz/HomeQuiz";
+import Evaluate from "@assignmentquiz/Evaluate";
+import Quiz from "@assignmentquiz/Quiz";
+import Score from "@assignmentquiz/Score";
+// import HomeQuizLayout from "@assignmentquiz/HomeQuizLayout";
+import NavQuiz from "@assignmentquiz/NavQuiz";
 
 const Routers = createBrowserRouter([
   {
@@ -92,14 +98,6 @@ const Routers = createBrowserRouter([
     path: "/pokemon",
     element: <Pokemon />,
   },
-  // {
-  //   path: "/filter",
-  //   element: <Filter />,
-  // },
-  // {
-  //   path: "/example",
-  //   element: <Example />,
-  // },
   {
     path: "/pokemon/pokemon-list",
     element: <Home />,
@@ -115,6 +113,49 @@ const Routers = createBrowserRouter([
   {
     path: "/detail/:pokemon",
     element: <Detail />,
+  },
+  // {
+  //   path: "/",
+  //   element: <NavQuiz />,
+  //   children:[
+  //     {
+  //       path: "homequiz",
+  //       element: <HomeQuiz />,
+
+  //     },
+  //     {
+  //       path: "evaluate",
+  //       element: <Evaluate />,
+  //     },
+  //     {
+  //       path: "quiz",
+  //       element: <Quiz />,
+  //     },
+  //     {
+  //       path: "score",
+  //       element: <Score />,
+  //     },
+  //   ]
+  // },
+  {
+    path: "/navquiz",
+    element: <NavQuiz />,
+  },
+  {
+    path: "homequiz",
+    element: <HomeQuiz />,
+  },
+  {
+    path: "evaluate",
+    element: <Evaluate />,
+  },
+  {
+    path: "quiz",
+    element: <Quiz />,
+  },
+  {
+    path: "score",
+    element: <Score />,
   },
 ]);
 

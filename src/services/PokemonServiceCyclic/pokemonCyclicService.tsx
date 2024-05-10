@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import {
-  PokemonCyclicRequest,
   GetPokemon,
 } from "./pokemonCyclicRequest/pokemonCyclicRequest";
 import {
@@ -24,14 +23,14 @@ const pokemonCyclicService = createApi({
         }
         return `pokemon`;
       },
-      transformResponse: (response: RawPokemon, meta, arg) =>
+      transformResponse: (response: RawPokemon) =>
         response.data.data,
     }),
     getDetailPokemon: builder.query<PokemonCyclicResponse, { no: string }>({
       query: ({ no }) => {
         return `pokemon/${no}`;
       },
-      transformResponse: (response: RawPokemon, meta, arg) =>
+      transformResponse: (response: RawPokemon) =>
         response.data.data,
     }),
   }),

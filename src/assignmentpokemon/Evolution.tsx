@@ -19,7 +19,7 @@ const Evolution = ({
           <ArrowRightOutlined  className="mt-5" />
         </div>
       )}
-      <div className="bg-[#EDEEF1] flex flex-col justify-between items-center p-5 shadow-lg shadow-slate-300 w-[300px] mb-10">
+      <div className="bg-[#EDEEF1] flex flex-col justify-between items-center p-5 shadow-lg shadow-slate-300 w-[200px] mb-10 rounded-lg">
         <div>
           <img
             src={`https://raw.githubusercontent.com/HybridShivam/Pokemon/master/assets/images/${no}.png`}
@@ -36,7 +36,7 @@ const Evolution = ({
               boxShadow: `0 0 10px 0 ${ColorPokemon[type]}`,
             }}
           >
-            <div className="ml-2 mr-2 text-white">{detail?.name}</div>
+            <div className="ml-2 mr-2 text-white capitalize">{detail?.name}</div>
           </div>
         ))}
         <div className="flex m-3">

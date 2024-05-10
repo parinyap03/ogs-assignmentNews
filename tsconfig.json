@@ -35,6 +35,7 @@
       "@store/*": ["store/*"],
       "@services/*": ["services/*"],
       "@workshoppokemon/*": ["workshoppokemon/*"],
+      "@assignmentquiz/*": ["assignmentquiz/*"],
     }
   },
   "include": ["src"],

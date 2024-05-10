@@ -7,12 +7,10 @@ import godric from "../assets/godric.jpg";
 import "../apicourse/ApiStyle.css";
 import logo from "../assets/harrylogo.png";
 import { motion } from "framer-motion";
-import hfbg from "../assets/hfbg.jpg";
 import slbg from "../assets/slbg.jpg";
 import rvbg from "../assets/rvbg.jpg";
 import gfbg from "../assets/gfbg.jpg";
 import cedric from "../assets/cedric.jpg";
-import flipbg from "../assets/flipbg.jpg";
 
 type Head = {
   id: string;
@@ -115,7 +113,7 @@ const ApiWorkshop = () => {
   // const onChange = (key: string | string[]) => {
   //   console.log(key);
   // };
-  console.log(data);
+  // console.log(data);
   useEffect(() => {
     AxiosFetchData();
   }, []);

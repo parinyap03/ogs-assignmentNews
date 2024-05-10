@@ -22,7 +22,6 @@ type cardType = {
   stats: StatPokemon;
 };
 
-// type "square"Type = "circle" | "square";
 const Card: React.FC<cardType> = ({
   isLoading = false,
   name,
@@ -74,7 +73,7 @@ const Card: React.FC<cardType> = ({
                     <div className="bg-gray-400 text-center w-fit p-1 mt-2 rounded-lg bg-opacity-50 text-white font-bold ">
                       {name.toUpperCase()}
                     </div>
-                    <div className="flex mt-3  ">
+                    <div className="flex mt-3 justify-evenly  ">
                       <div className="flex flex-col justify-center items-center">
                         <img src={heart} width={18} alt="heart" />
                         <div className="mt-2">{stats.hp}</div>
@@ -85,7 +84,7 @@ const Card: React.FC<cardType> = ({
                       </div>
                       <div className="flex flex-col ml-4 justify-center items-center">
                         <img src={award} width={18} alt="award" />
-                        <div className="mt-2">{stats.defense}</div>
+                        <div className="mt-2 ">{stats.defense}</div>
                       </div>
                       <div className="flex flex-col ml-4 justify-center items-center">
                         <img src={shoe} width={18} alt="shoe" />
