@@ -50,7 +50,7 @@ const Evaluate = () => {
               <div className="flex items-center">
                 <Progress
                   showInfo={false}
-                  percent={50}
+                  percent={80}
                   status="active"
                   className="w-[200px]"
                 />
@@ -62,7 +62,7 @@ const Evaluate = () => {
               <div className="flex items-center">
                 <Progress
                   showInfo={false}
-                  percent={50}
+                  percent={70}
                   status="active"
                   className="w-[200px]"
                 />

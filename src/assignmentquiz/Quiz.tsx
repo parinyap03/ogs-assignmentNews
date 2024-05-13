@@ -150,7 +150,7 @@ const Quiz = () => {
                             data-theme={theme}
                             value={selectAnswers[currentQuestion] || ""}
                           >
-                            <Radio value="A" className="quizcontent  w-[600px] text-[14px] mt-5">
+                            <Radio  value="A" className="quizcontent  w-[600px] text-[14px] mt-5">
                               {questionData[currentQuestion].A}
                             </Radio>
                             <Radio value="B" className="quizcontent text-[14px] mt-2">

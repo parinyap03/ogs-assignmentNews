@@ -9,14 +9,21 @@ export type quizSlice = {
   isSubmit: boolean;
   scoreList: number[];
 };
+function getStoredScore() {
+  const storedScore = localStorage.getItem("score");
+  if (storedScore) {
+    return JSON.parse(storedScore);
+  }
+  return [];
 
+}
 const initialState: quizSlice = {
   score: 0,
   start: false,
   currentQuestion: 0,
   selectAnswers: [],
   isSubmit: false,
-  scoreList: [],
+  scoreList: getStoredScore(),
 };
 
 export const quizSlice = createSlice({
@@ -46,6 +53,7 @@ export const quizSlice = createSlice({
         state.value.scoreList.shift();
       }
       state.value.isSubmit = true;
+      localStorage.setItem("score", JSON.stringify(state.value.scoreList));
     },
     reQuiz: (state) => {
       state.value.score = 0;

@@ -426,6 +426,18 @@ button:active {
   border-bottom-right-radius: 100px;
 }
 
+/* .ant-radio-wrapper .ant-radio-input:focus + .ant-radio-inner,
+.ant-radio-wrapper:hover .ant-radio-inner,
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  border-color: #d78e73;
+  background-color: #d79873;
+}
 
+[data-theme="light"].ant-radio-wrapper .ant-radio-input:focus + .ant-radio-inner,
+.ant-radio-wrapper:hover .ant-radio-inner,
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+  border-color: #73CED7;
+  background-color: #73CED7;
+} */
 
 
